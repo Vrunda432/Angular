@@ -1,0 +1,25 @@
+div {
+    padding: 10px;
+    margin: 10px;
+  }
+  h2{
+    color:pink;
+  }
+  p{
+    color:red;
+  }
+  footer{
+    color:yellowgreen;
+  }
+ footer {
+    color: rgb(59, 155, 239);
+  }
+ input {
+    background-color: aliceblue;
+    color: blueviolet;
+    
+  }
+  input:hover{
+    background-color: lightcoral;
+    color: black;
+  }
