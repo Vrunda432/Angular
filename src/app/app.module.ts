@@ -3,18 +3,45 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UserComponent } from './user/user.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { DemoDirective } from './directtives/demo.directive';
+import { HeaderComponent } from './header/header.component';
+import { RegisterComponent } from './register/register.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserComponent,
+    ParentComponent,
+    ChildComponent,
+    DemoDirective,
+    HeaderComponent,
+    RegisterComponent,
+    PageNotFoundComponent,
+    
+    
+   
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    
+  
   ],
   providers: [
     provideClientHydration(withEventReplay())
-  ],
+  ], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

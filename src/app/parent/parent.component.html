@@ -1,0 +1,81 @@
+<p>parent works!</p>
+
+<!-- //ng afterviewinit   -->
+<!-- directtives-> demo.com.sp.ts values[appDemo] -->
+<input  appDemo id="" name="" > 
+<br>
+<br>
+<hr/>
+
+<input  #myInput id="" name="" [ngClass]="{'active': isVisible, 'border' : isClass}">
+
+<input #myInput id="" name="" [ngStyle]="{'background-color': color}"> 
+
+
+<!-- <p>This is parent component data ={{ParentUserName}}</p> -->
+{{ParentUserName}}
+
+
+<br>
+<br>
+
+<!-- data transfer in 2 way 
+1 @input/@outpout
+2. using services -->
+<!-- parent to child data transfer @ input()(decorater)
+child to parent @ output -->
+<br>
+
+<!-- data from child.com.ts in [ ] = " value" is in parent.com.ts file-->
+<!-- else elsePart for *ngif else -->
+
+
+<app-child id=""  *ngIf="isVisible ; else elsePart"  [GetDataFromParentUserName]="ParentUserName" 
+(PassDataToParent)="GetDataFromChild($event)"></app-child>
+
+<!-- //structure directives
+*ngif else -->
+
+<ng-template #elsePart>
+
+    <h1>
+        This is my else part. content is visible from else part!
+    </h1>
+</ng-template>
+<!-- //ngondestroy ex -->
+ <button (click)="isVisible= !isVisible ;isClass=!isClass; color = 'pink'"> Hide/show Child</button>
+
+<br>
+<br>
+<br>
+
+ <!-- from par.com.ts data
+*ngforEx-customerList -->
+<table border="black">
+    <tr>
+        <th>Sr No</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+    </tr>
+    <tr *ngFor="let item of customerList;index as i">
+    <td>{{i+1}}</td>
+    <td>{{item.Fname}}</td>
+    <td>{{item.Lname}}</td>
+    </tr>
+    
+    </table>
+<br>
+<br>
+<br>
+<hr/>
+    <!-- //switch case example -->
+
+    <label for="role">Select User Role  </label>
+    <select id="role" [(ngModel)]="selectedRole">
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+        <option value="guest">Guest</option>
+      </select>
+
+
+

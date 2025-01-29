@@ -1,0 +1,32 @@
+<p>user works!</p>
+
+<!-- //data bindng(interpolation) always in duble-curly brkts
+//our ts file variable -->
+{{userName}}
+<br>
+<br>
+{{userName + ' This is my Angular page'}}
+<br>
+<br>
+<!-- //use brkts like
+[ ]->attribute binding
+( )->Event -->
+ <!-- // 2 types for binding data 1. -->
+<input id="txtUserName" name="" value={{userName}}>
+<!-- // 2nd types -->
+
+<br>
+<br>
+<!--
+dynemic-ts file ni andr -->
+<!-- //static  -->
+<!-- onchange="onclick()" -->
+ <!-- 1 way binding mate -->
+<!-- <input [id]="userName" name=" " [value]="userName"  (change)="onClick()"> -->
+ <!-- 2 way binding mate you can use [(ngModel)] and remove the [value]="userName"  -->
+ <!-- //error in console -->
+<input [id]="userName" name=" " [(ngModel)]="userName"  (change)="onClick()">
+
+<button (click)="onClickEvent()">Save</button>
+
+
