@@ -11,6 +11,7 @@ import { DemoDirective } from './directtives/demo.directive';
 import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -26,6 +27,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeaderComponent,
     RegisterComponent,
     PageNotFoundComponent,
+    FooterComponent,
     
     
    
